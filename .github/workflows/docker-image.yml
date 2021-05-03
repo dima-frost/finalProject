@@ -23,6 +23,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
+        name: Check Out Repo
+        uses: actions/checkout@v2
+      -
         name: Build the Docker image
-        run: ls -la
- #       docker build ./finalProject/pyapp --tag ${{ secrets.DOCKER_USERNAME }}/pyapp:latest
+        run: docker build ./pyapp --tag ${{ secrets.DOCKER_USERNAME }}/pyapp:latest
