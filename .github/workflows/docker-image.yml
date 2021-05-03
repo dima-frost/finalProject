@@ -24,6 +24,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Build the Docker image
-        id: docker_build
-        uses: actions/checkout@v2
         run: docker build ./pyapp --file Dockerfile --tag dimafrost/pyapp:latest
