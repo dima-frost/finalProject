@@ -24,5 +24,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Build the Docker image
-        run: pwd && ls
-#docker build ./pyapp --file Dockerfile --tag dimafrost/pyapp:latest
+        run: docker build  -f ./pyapp/Dockerfile --tag dimafrost/pyapp:latest
