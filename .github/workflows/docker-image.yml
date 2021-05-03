@@ -24,4 +24,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Build the Docker image
-        run: docker build ./finalProject/pyapp --tag ${{ secrets.DOCKER_USERNAME }}/pyapp:latest
+        run: pwd
+ #       docker build ./finalProject/pyapp --tag ${{ secrets.DOCKER_USERNAME }}/pyapp:latest
